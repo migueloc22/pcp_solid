@@ -15,5 +15,6 @@ class CocheDB():
     pass
 coche =  Coche('mercedes')
 cocheDB = CocheDB()
+cocheDB.guardarCocheDB(coche)
 cocheDB.eliminarCocheDB(coche)
     

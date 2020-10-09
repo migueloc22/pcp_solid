@@ -8,11 +8,17 @@ class Conexion  (ABC):
         pass
 class DatabaseService(Conexion):
     def  getDatos(self):
-            pass
-    def  setDatos(self):
-        pass
+        return self.cnn
+    def  setDatos(self,cnn):
+        self.cnn=cnn
 class APIService(Conexion):
     def  getDatos(self):
-            pass
-    def  setDatos(self):
-        pass
+        return self.cnn
+    def  setDatos(self,cnn):
+        self.cnn=cnn
+api = APIService()
+api.setDatos('esta la coonecion de la api')
+print(api.getDatos())
+db = DatabaseService()
+db.setDatos('esta la coonecion de la db')
+print(db.getDatos())

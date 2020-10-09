@@ -13,17 +13,26 @@ class IAveNadadora (ABC):
         pass
 class Loro (IAve,IAveVoladora):
     def volar(self):
-        pass
+        return 'Loro vuela.'
     def comer(self):
-        pass
+        return 'Loro come.'
 class Tucan  (IAve,IAveVoladora):
     def volar(self):
-        pass
+        return 'Tucan vuela.'
     def comer(self):
-        pass
-class Pinguino (IAve,IAveVoladora):
+        return 'Tucan come.'
+class Pinguino (IAve,IAveNadadora):
     def comer(self):
-        pass
-    def nadar(self):
-        pass
+        return 'pinguino come.'
+    def nadadora(self):
+        return 'pinguino nada.'
 
+aves=[
+    Loro(),
+    Tucan(),
+    Pinguino()
+]
+def imprimirAve(aves):
+    for ave in aves:
+        print(ave.comer())
+imprimirAve(aves)
